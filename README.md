@@ -10,6 +10,9 @@ Most Discord agents assume a full OS, a language runtime, a garbage collector, a
     3. Program is written in C and uses the Curl and cJSON libraries.
 
 # Build instructions
+Update the following in flaneur.c with the requisite webhook and Groq key. 
+#define DISCORD_WEBHOOK "INSERT_DISCORD_CHANNEL_WEBHOOK_HERE"
+#define LLM_API_KEY "INSERT_GROQ_KEY_HERE" 
 
 ## BareMetal
 git clone https://github.com/ReturnInfinity/BareMetal-App
@@ -24,4 +27,5 @@ cd BareMetal-App
 flaneur.c is also a valid standalone C program - just link it against libcurl and libcjson:
 
 gcc -O2 -o flaneur flaneur.c -lcurl -lcjson
+
 ./flaneur
