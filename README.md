@@ -11,10 +11,12 @@ Most Discord agents assume a full OS, a language runtime, a garbage collector, a
 
 # Build instructions
 Update the following in flaneur.c with the requisite webhook and Groq key. 
+```
 #define DISCORD_WEBHOOK "INSERT_DISCORD_CHANNEL_WEBHOOK_HERE"
 #define LLM_API_KEY "INSERT_GROQ_KEY_HERE" 
-
+```
 ## BareMetal
+```
 git clone https://github.com/ReturnInfinity/BareMetal-App
 cp flaneur.c BareMetal-App/
 cd BareMetal-App
@@ -22,10 +24,9 @@ cd BareMetal-App
 ./1-build.sh flaneur.c
 ./2-run.sh
 ./3-upload.sh # optional - upload to BareMetal Cloud
-
+```
 ## *nix (Linux/BSD/macOS)
 flaneur.c is also a valid standalone C program - just link it against libcurl and libcjson:
-
+```
 gcc -O2 -o flaneur flaneur.c -lcurl -lcjson
-
-./flaneur
+./flaneur ```
