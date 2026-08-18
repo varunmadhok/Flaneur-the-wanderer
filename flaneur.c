@@ -3,7 +3,8 @@
 #include <string.h>
 #include <unistd.h>
 #include <curl/curl.h>
-#include <cjson/cJSON.h>
+#include "cjson/cJSON.h" 
+// For the program to compile seamlessly in both BareMetal and *NIX environments, clone https://github.com/davegamble/cjson locally
 
 #define SLEEP_SECONDS 1800 // Run every 30 minutes
 #define DISCORD_WEBHOOK "INSERT_DISCORD_CHANNEL_WEBHOOK_HERE"
