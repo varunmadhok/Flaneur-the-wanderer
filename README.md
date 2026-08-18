@@ -10,11 +10,14 @@ Most Discord agents assume a full OS, a language runtime, a garbage collector, a
     3. Program is written in C and uses the Curl and cJSON libraries.
 
 # Build instructions
+For compiling in BareMetal you need a local copy of cjson. Locate the cjson folder and files in the BareMetal-App directory. 
+```
+git clone https://github.com/davegamble/cjson
+```
 Update the following in flaneur.c with the requisite webhook and Groq key. 
 ```
 #define DISCORD_WEBHOOK "INSERT_DISCORD_CHANNEL_WEBHOOK_HERE"
 #define LLM_API_KEY "INSERT_GROQ_KEY_HERE" 
-git clone https://github.com/davegamble/cjson
 ```
 ## BareMetal
 ```
